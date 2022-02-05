@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    fake_file_name (file name is useless too)          :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: 42header-remover <whatever@example.com>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 1970/01/01 00:00:00 by Git handles       #+#    #+#              #
-#    Updated: 1970/01/01 00:00:00 by file history     ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 # FILE_NAME="$(basename $1)$(printf %45s)" # uncomment when norminette starts complain it
 FILE_NAME="fake_file_name (file name is useless too)    "
 FILE_NAME_45="${FILE_NAME:0:45}";

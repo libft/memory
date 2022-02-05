@@ -21,13 +21,13 @@ It will copy `hooks/pre-commit.sh` into `.git/hooks/pre-commit`, and set execute
 
 File history is handled really great by git.
 
-Just let git handle it, and stop polluting history :)
+Just let VCS handle it, and stop polluting history :)
 
-This pre-commit script will remove 42 header from `*.c` and `*.h` files
+This pre-commit script will remove 42 header from `Makefile` and `*.{c,h,sh,mk}` files
 
-Alternate method: run shell command below **before every commit**, or never touch 42 header
+Alternative: run shell command below **before every commit**, or never touch 42 header
 
 ```sh
-find . -name '*.c' -o -name "*.h" -o -name "*.sh" -o -name Makefile \
+find . -name '*.c' -o -name "*.h" -o -name "*.sh" -o -name "*.mk" -o -name "Makefile" \
 | xargs -L1 sh hooks/scripts/42header-remover.sh
 ```

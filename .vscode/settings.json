@@ -3,7 +3,6 @@
 		".vscode": true,
 	},
   "files.associations": {
-    "*.Makefile": "makefile",
     "*.h": "c",
   },
   "C_Cpp.default.cStandard": "c99",

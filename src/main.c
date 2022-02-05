@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: 42header-remover <whatever@example.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 1970/01/01 00:00:00 by Git handles       #+#    #+#             */
+/*   Created: 1970/01/01 00:00:00 by VCS handles       #+#    #+#             */
 /*   Updated: 1970/01/01 00:00:00 by file history     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int argc, char **argv, char **envp)
+#include "main.h"
+
+int	main(int argc, char **argv)
 {
 	(void) argc;
 	(void) argv;
-	(void) envp;
 	return (0);
 }

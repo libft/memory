@@ -38,9 +38,19 @@ re: fclean all
 .PHONY: all clean fclean re
 
 # common rules
-%.o: $(SRC_DIR)/%.c
-	$(Q)mkdir -p $(@D)
-	$(Q)$(CC) $(CFLAGS) -c $< -o $@ -MD
+define build_common_rule
+$1: $2
+	$(Q)mkdir -p $(dir $1)
+	$(Q)$(CC) $(CFLAGS) -c $2 -o $1 -MD
+endef
+$(foreach f, \
+	$(OBJS), \
+	$(eval $(call \
+		build_common_rule, \
+		$f, \
+		$(shell sh $(BASE_DIR)/build/scripts/o-to-src.sh $f $(SRC_DIR)) \
+	)) \
+)
 
 # auto updated dependencies
 -include $(OBJS:%.o=%.d)

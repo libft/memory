@@ -14,7 +14,7 @@ $(call require_v, TARGET_TYPE, a or so)
 # common variables
 CC = gcc
 SRC_DIR := $(BASE_DIR)/src
-CFLAGS := -Wall -Wextra -Werror -std=c99 -pedantic -I$(SRC_DIR)/includes
+CFLAGS := -Weverything -Wno-poison-system-directories -Werror -std=c99 -pedantic -I$(SRC_DIR)/includes
 LDFLAGS :=
 SRCS := $(shell sh $(BASE_DIR)/build/scripts/get-srcs.sh $(SRC_DIR))
 OBJS := $(SRCS:%.c=%.o)

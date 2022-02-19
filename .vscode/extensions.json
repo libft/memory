@@ -3,6 +3,7 @@
     "secondfry.42header-long",
     "mariusvanwijk-joppekoers.codam-norminette-3",
     "ms-vscode.cpptools",
-    "EditorConfig.EditorConfig"
+    "editorconfig.editorconfig",
+    "jbenden.c-cpp-flylint"
   ]
 }

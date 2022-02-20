@@ -1,4 +1,5 @@
 Q = $(if $(filter 1,$(V) $(VERBOSE)),,@)
+colon := :
 
 all:
 	$(Q)sh -c "cd build/debug/a && make all"
@@ -15,11 +16,8 @@ fclean:
 	$(Q)sh -c "cd build/debug/so && make fclean"
 	$(Q)sh -c "cd build/release/a && make fclean"
 	$(Q)sh -c "cd build/release/so && make fclean"
+	$(Q)rm -rf dist
 re: fclean all
 dist: re
-	$(Q)rm -rf dist
-	$(Q)mkdir -p dist/includes
-	$(Q)cp build/release/a/lib*.a dist
-	$(Q)cp build/release/so/lib*.so dist
-	$(Q)cp -r src/includes dist
+	$(Q)sh build/scripts/dist.sh
 .PHONY: all clean fclean re dist

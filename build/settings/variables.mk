@@ -1,1 +1,1 @@
-NAME := name
+NAME := memory

@@ -1,4 +1,22 @@
-# \[name\]
+# memory
+
+`memset`, `memcpy`, `memcmp`, `memchr` series
+
+Caution: `ft_memchp` replaces `memchr` to keep consistency with `stpcpy`, `strcpy`
+
+- `stpcpy` returns `'\0'`'s position
+- `ft_memchp` returns pointer to found position (which `memchr` does)
+- `ft_memchr` returns index of found position, or length if not found
+
+## Usage
+
+To use it, you need to include its header.
+
+```c
+#include <ft/memory.h>
+```
+
+`memory` provides more functions than the standard C library. See the comment in the [header file](src/includes/ft/memory.h) for details on each function.
 
 ## Contributing
 

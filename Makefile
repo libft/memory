@@ -16,4 +16,10 @@ fclean:
 	$(Q)sh -c "cd build/release/a && make fclean"
 	$(Q)sh -c "cd build/release/so && make fclean"
 re: fclean all
-.PHONY: all clean fclean re
+dist: re
+	$(Q)rm -rf dist
+	$(Q)mkdir -p dist/includes
+	$(Q)cp build/release/a/lib*.a dist
+	$(Q)cp build/release/so/lib*.so dist
+	$(Q)cp -r src/includes dist
+.PHONY: all clean fclean re dist

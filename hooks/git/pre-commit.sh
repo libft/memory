@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git diff --exit-code --cached --name-only --diff-filter=ACM -- \
 '*.c' '*.h' '*.sh' '*.mk' 'Makefile' \

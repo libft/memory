@@ -20,7 +20,7 @@ To use it, you need to include its header.
 
 ## Contributing
 
-Any PR is welcome if below is kept
+Any PR is welcome if below kept
 
 - _**[DON'T COMMIT FILES WITH 42 HEADER NOT REMOVED](#remove-42-header)**_
 - If possible, keep the [Norm](https://github.com/42School/norminette)
@@ -30,14 +30,16 @@ Any PR is welcome if below is kept
 Run `init.sh` to initialize git pre-commit hook.
 
 ```sh
-sh init.sh
+bash init.sh
 ```
+
+Note: POSIX shell is not supported. use bash instead.
 
 It will copy `hooks/pre-commit.sh` into `.git/hooks/pre-commit`, and set execute permission on it.
 
 #### remove 42 header
 
-File history is handled really great by git.
+File history managed by VCS.
 
 Just let VCS handle it, and stop polluting history :)
 

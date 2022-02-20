@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # FILE_NAME="$(basename $1)$(printf %45s)" # uncomment when norminette starts complain it
 FILE_NAME="fake_file_name (file name is useless too)    "
 FILE_NAME_45="${FILE_NAME:0:45}";

@@ -6,3 +6,5 @@ release/a/*
 !release/a/Makefile
 release/so/*
 !release/so/Makefile
+debug/test/*
+!debug/test/Makefile

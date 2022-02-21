@@ -16,4 +16,5 @@
     "src/includes",
     ".ft_cache/dependencies/includes",
   ],
+  "norminette.fileregex": "*\\.[ch]$",
 }

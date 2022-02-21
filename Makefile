@@ -11,13 +11,15 @@ clean:
 	$(Q)sh -c "cd build/debug/so && make clean"
 	$(Q)sh -c "cd build/release/a && make clean"
 	$(Q)sh -c "cd build/release/so && make clean"
+	$(Q)sh -c "cd build/debug/test && make clean"
 fclean:
 	$(Q)sh -c "cd build/debug/a && make fclean"
 	$(Q)sh -c "cd build/debug/so && make fclean"
 	$(Q)sh -c "cd build/release/a && make fclean"
 	$(Q)sh -c "cd build/release/so && make fclean"
+	$(Q)sh -c "cd build/debug/test && make fclean"
 	$(Q)rm -rf dist
 re: fclean all
-dist: re
+dist: re clean
 	$(Q)sh build/scripts/dist.sh
 .PHONY: all clean fclean re dist

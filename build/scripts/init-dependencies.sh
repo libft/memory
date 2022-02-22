@@ -1,7 +1,8 @@
 #!/bin/sh
 
-FILE="ft_deps.properties"
+mkdir -p .ft_cache/dependencies
 
+FILE="ft_deps.properties"
 if [ -f "$FILE" ]
 then
   while IFS='=' read -r key value

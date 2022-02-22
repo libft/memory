@@ -1,10 +1,2 @@
-debug/a/*
-!debug/a/Makefile
-debug/so/*
-!debug/so/Makefile
-release/a/*
-!release/a/Makefile
-release/so/*
-!release/so/Makefile
-debug/test/*
-!debug/test/Makefile
+debug/**/*
+release/**/*

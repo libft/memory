@@ -12,18 +12,16 @@
 
 #include <ft/memory.h>
 
-int	ft_memcmp(void *s1, void *s2, size_t size)
+void	*ft_mem_different(void *s1, void *s2, size_t size)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < size)
 	{
-		if ((unsigned char *) s1 > (unsigned char *) s2)
-			return (1);
-		if ((unsigned char *) s1 < (unsigned char *) s2)
-			return (-1);
+		if (*((unsigned char *) s1 + i) != *((unsigned char *) s2 + i))
+			return (s1);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -18,11 +18,14 @@
 void	ft_zeromemory(void *ptr, size_t size);
 void	ft_memset(void *ptr, size_t size, char value);
 void	ft_array_memset(void *ptr, size_t count, size_t size, void *value);
-
 void	ft_memcpy(void *dest, void *src, size_t size);
 void	ft_memmove(void *dest, void *src, size_t size);
 
 int		ft_memcmp(void *s1, void *s2, size_t size);
+size_t	ft_mem_different_index(void *s1, void *s2, size_t size);
+void	*ft_mem_different(void *s1, void *s2, size_t size);
+size_t	ft_mem_different_index_reverse(void *s1, void *s2, size_t size);
+void	*ft_mem_different_reverse(void *s1, void *s2, size_t size);
 
 size_t	ft_memchr(void *ptr, char value, size_t size);
 void	*ft_memchp(void *ptr, char value, size_t size);

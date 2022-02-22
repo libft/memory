@@ -19,6 +19,6 @@ void	*ft_memrchp(void *ptr, char value, size_t size)
 	i = size;
 	while (i--)
 		if (*((char *) ptr + i) == value)
-			return ((void*)((char *) ptr + i));
+			return ((void *)((char *) ptr + i));
 	return (NULL);
 }

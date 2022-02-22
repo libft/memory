@@ -51,3 +51,9 @@ Alternative: run shell command below **before every commit**, or never touch 42 
 find . -name '*.c' -o -name "*.h" -o -name "*.sh" -o -name "*.mk" -o -name "Makefile" \
 | xargs -L1 sh hooks/scripts/42header-remover.sh
 ```
+
+### dependencies
+
+It will automatically download Github release assets for dependencies described in the `ft_header_deps.properties` file.
+
+After change dependencies, please run `build/script/init-header-deps.sh` manually.

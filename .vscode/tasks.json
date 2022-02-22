@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "process",
+      "label": "debug - make all",
+      "command": "make",
+      "args": [
+        "all",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/build/debug/test"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
+    },
+    {
+      "type": "process",
+      "label": "debug - make re",
+      "command": "make",
+      "args": [
+        "re",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/build/debug/test"
+      },
+      "group": "build",
+    },
+  ],
+}

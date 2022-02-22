@@ -12,14 +12,13 @@
 
 #include <ft/memory.h>
 
-void	ft_zeromemory(void *ptr, size_t size)
+size_t	ft_memrstr(void *ptr, void *value, size_t ptr_size, size_t value_size)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < size)
-	{
-		*((char *)ptr) = 0;
-		i++;
-	}
+	i = ptr_size - value_size + 1;
+	while (i-- > 0)
+		if (!ft_memcmp((void *)((char *) ptr + i), value, value_size))
+			return (i);
+	return (ptr_size);
 }

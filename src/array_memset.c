@@ -10,16 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdint.h>
+
 #include <ft/memory.h>
 
-void	ft_zeromemory(void *ptr, size_t size)
+void	ft_array_memset(void *ptr, size_t count, size_t size, void *value)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < size)
+	while (i < count)
 	{
-		*((char *)ptr) = 0;
+		ft_memcpy((void *)((uintptr_t) ptr + i * size), value, size);
 		i++;
 	}
 }

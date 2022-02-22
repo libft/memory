@@ -10,16 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdint.h>
+
 #include <ft/memory.h>
 
-void	ft_zeromemory(void *ptr, size_t size)
+static void	ft_memrcpy(void *dest, void *src, size_t size)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < size)
-	{
-		*((char *)ptr) = 0;
-		i++;
-	}
+	i = size;
+	while (i--)
+		*((char *)dest) = *((char *)src);
+}
+
+void	ft_memmove(void *dest, void *src, size_t size)
+{
+	if (src == dest)
+		return ;
+	if (src < dest && (uintptr_t) src + (uintptr_t) size > (uintptr_t) dest)
+		ft_memrcpy(dest, src, size);
+	else
+		ft_memcpy(dest, src, size);
 }

@@ -22,15 +22,15 @@ void	ft_array_memset(void *ptr, size_t count, size_t size, void *value);
 void	ft_memcpy(void *dest, void *src, size_t size);
 void	ft_memmove(void *dest, void *src, size_t size);
 
-int		ft_memcmp(void *dest, void *src, size_t size);
+int		ft_memcmp(void *s1, void *s2, size_t size);
 
-size_t	ft_memchr(void *ptr, char value);
-void	*ft_memchp(void *ptr, char value);
-size_t	ft_memstr(void *ptr, void *value, size_t size);
-void	*ft_memstp(void *ptr, void *value, size_t size);
-size_t	ft_memrchr(void *ptr, char value);
-void	*ft_memrchp(void *ptr, char value);
-size_t	ft_memrstr(void *ptr, void *value, size_t size);
-void	*ft_memrstp(void *ptr, void *value, size_t size);
+size_t	ft_memchr(void *ptr, char value, size_t size);
+void	*ft_memchp(void *ptr, char value, size_t size);
+size_t	ft_memstr(void *ptr, void *value, size_t ptr_size, size_t value_size);
+void	*ft_memstp(void *ptr, void *value, size_t ptr_size, size_t value_size);
+size_t	ft_memrchr(void *ptr, char value, size_t size);
+void	*ft_memrchp(void *ptr, char value, size_t size);
+size_t	ft_memrstr(void *ptr, void *value, size_t ptr_size, size_t value_size);
+void	*ft_memrstp(void *ptr, void *value, size_t ptr_size, size_t value_size);
 
 #endif

@@ -19,7 +19,7 @@ void	ft_zeromemory(void *ptr, size_t size)
 	i = 0;
 	while (i < size)
 	{
-		*((char *)ptr) = 0;
+		*((char *) ptr++) = 0;
 		i++;
 	}
 }
